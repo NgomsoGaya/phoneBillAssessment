@@ -1,0 +1,11 @@
+header {
+  height: 90px;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
