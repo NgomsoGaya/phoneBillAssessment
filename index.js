@@ -6,6 +6,7 @@ import 'dotenv/config'
 import pgPromise from "pg-promise";
 import flash from "express-flash";
 import session from "express-session";
+import renderResults from "./render/render.js";
 
 //create an instance of the express application
 const app = express();
@@ -46,8 +47,10 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: "main" }));
 app.use(bodyParser.json());
 
-app.get('/', );
-app.post('/calc_bill',);
+const render = renderResults()
+
+app.get('/', render.showTotal);
+app.post('/calc_bill', render.phoneBillMessages);
 app.get('/price_plans',);
 app.get('/price_plans/:id',);
 app.get('/link_user',);

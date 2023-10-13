@@ -1,8 +1,8 @@
 <header>
     <nav>
-        <a href="#home"></a>
-        <a href="#priceplans"></a>
-        <a href="#linkuser"></a>
+        <a href="#home">Home</a>
+        <a href="#priceplans">Price Plans</a>
+        <a href="#linkuser">Link User</a>
     </nav>
 </header>
 
@@ -10,18 +10,24 @@
 
 <h2>Calculate total phone bill for user</h2>
 
+<form action="/calc_bill" method="post">
+
 <div>
     <h3>Username: </h3>
-    <input type="text">
+    <input type="text" name="username">
 </div>
 <div>
     <h3>Usage string: </h3>
-    <input type="text">
+    <input type="text" name="usageString">
 </div>
+
+<span>{{message}}</span>
 
 <button>Calculate Bill</button>
 
 <div>
     <h3>Bill Total: </h3>
-    <div>R30.00</div>
+    <div{{{total}}}>R30.00</div>
 </div>
+
+</form>
